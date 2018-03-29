@@ -1,0 +1,708 @@
+/*
+Theme Name: slim
+Theme URI: http://blog.hatena.ne.jp/-/store/theme/12921228815715016151
+Description: 日記系ブログをスリムに、スマートにみせるためのテーマです。* 更新履歴-ver1.0 (2013.12.24)：公開
+Author: kgsi
+Author URI: http://blog.hatena.ne.jp/kgsi/
+*/
+@charset "utf-8";
+
+
+/* ===============  import css =============== */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,300italic,300,500italic,700,700italic,900italic,900,100,100italic);
+
+
+
+/* =============== reset css =============== */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+
+
+/* =============== common =============== */
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  color: #878787;
+  text-decoration: underline;
+}
+a:active {
+  color: #666;
+}
+a:visited {
+  color: #666;
+}
+
+
+/* =============== base =============== */
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  background: transparent;
+  color: #111;
+}
+#globalheader-container {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+#container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background: #fff;
+}
+#container-inner {
+  text-align: left;
+}
+#blog-title {
+  width: 100%;
+}
+#blog-title-inner{
+  width: 960px;
+  margin: 110px auto 100px auto;
+}
+#title {
+  font-size: 150%;
+  font-family: 'Roboto', sans-serif, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro';
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+#title a {
+  color: #111;
+  text-decoration: none;
+}
+#blog-description {
+  font-size: 11px;
+}
+/* @Custom Header-image */
+.header-image-enable #blog-title #title {
+  padding: 20px 0 0 20px;
+}
+.header-image-enable #blog-title,
+.header-image-only #blog-title {
+  padding: 30px 0;
+}
+#content{
+  width: 960px;
+  margin: 50px auto 30px auto;
+}
+#content-inner:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+#wrapper {
+  width: 640px;
+  float: left;
+}
+.page-archive #wrapper,
+.page-about #wrapper {
+  padding-right:0px;
+  border-right: none;
+  background: none;
+}
+.entry {
+  /*margin-bottom: 80px;*/
+}
+.entry a{
+  text-decoration:underline;
+}
+.entry-inner{
+  margin-bottom: 80px;
+}
+.entry-header {
+  position: relative;
+}
+.date {
+  /*min-height: 100px;*/
+  /*border-right: 1px solid #CCC;*/
+  font-size: 78%;
+  margin-bottom: 7px;
+  font-family: 'Roboto', sans-serif;
+}
+.date a {
+  text-decoration: none;
+}
+/*.entry .date-month + .hyphen{
+}
+.date .date-year,
+.date .date-month{
+  font-family: 'Roboto', sans-serif;
+}*/
+.date .date-day{
+}
+.entry-title {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+.entry-title a {
+  color: #111;
+  text-decoration: none;
+}
+.categories {
+  padding: 0 0 10px 0;
+}
+.categories a {
+  font-size: 65%; 
+  text-decoration: none;
+  padding-left: 17px;
+  padding-right: 8px;
+  background: url(https://cdn-ak.f.st-hatena.com/images/fotolife/k/kgsi/20131224/20131224005831.png) no-repeat left -4px;
+  color:#888888;
+}
+.categories a:hover{
+  text-decoration: underline; 
+}
+
+.author,
+.entry-footer-time{
+  font-size: 65%;
+}
+.entry-footer {
+}
+.entry-footer-section,
+.social-buttons {
+  margin-bottom: 15px;
+}
+.pager {
+  margin: 15px 0;
+  font-size: 65%;
+}
+.pager a{
+  color: #EEEEEE;
+  padding: 7px 15px 7px 15px;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  background: #111;
+}
+#footer {
+  width: 100%;
+  padding: 10px 0 30px 0;
+}
+#footer-inner{
+  width: 960px;
+  margin: 0 auto;
+  font-size: 78%;
+  text-align: center;
+}
+#footer address {
+  display: inline;
+}
+#footer .services {
+  display: inline;
+  margin: 0 7px;
+}
+#footer a{
+  text-decoration: none;
+  color: #333;
+}
+#footer img {
+  vertical-align: middle;
+}
+.entry-header-menu{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 78%;
+  font-weight: bold;
+}
+.entry-header-menu a{
+  display: block;
+  background: url(https://cdn-ak.f.st-hatena.com/images/fotolife/k/kgsi/20131224/20131224005831.png) no-repeat left -42px;
+  padding:3px 0 3px 18px;
+  text-decoration: none;
+}
+.entry-header-menu a:hover{  
+  text-decoration:underline;
+}
+
+
+/* =============== comment =============== */
+
+.entry-comment {
+  list-style: none;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  font-size: 85%;
+}
+.comment-user-name .hatena-id-icon {
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+.comment-user-name {
+  margin-bottom: 7px;
+}
+.comment-user-name a {
+  color: #222;
+  font-weight: bold;
+}
+.comment-content {
+  line-height: 1.5em;
+  margin-bottom: 7px;
+  word-wrap: break-word;
+}
+.comment-user-name,
+.comment-content {
+  font-size: 80%;
+}
+.comment-metadata,
+.comment-metadata a {
+  font-size: 65%;
+  color: #aaa;
+}
+.leave-comment-title {
+  font-weight: bold;
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  padding: 15px 10px 15px 10px;
+  background: #111;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+
+}
+a.leave-comment-title{
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 65%;
+}
+.leave-comment-title:hover {
+  background: #666;
+}
+
+/* Entry-Content */
+.entry-content {
+  font-size: 80%;
+  line-height: 2.04;
+  letter-spacing: 0.01em;
+}
+.entry-content p {
+  margin: 0.7em 0 1em 0;
+}
+.entry-content img {
+  max-width: 100%;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin: 1.2em 0 0.4em 0;
+  line-height: 1.7;
+}
+.entry-content h1 {
+  font-size: 140%;
+}
+.entry-content h2 {
+  font-size: 130%;
+}
+.entry-content h3 {
+  font-size: 120%;
+}
+.entry-content h4 {
+  font-size: 110%;
+}
+.entry-content h5 {
+  font-size: 100%;
+}
+.entry-content h6 {
+  font-size: 90%;
+}
+.entry-content ul,
+.entry-content ol,
+.entry-content dd {
+  margin: 0 0 0 1.5em;
+  padding: 0;
+}
+.entry blockquote {
+  padding: 10px;
+  margin: 1em 0;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+.entry blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hatena-asin-detail, .itunes-embed {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+.entry-content table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.entry-content table th,
+.entry-content table td {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+.entry-content table th {
+  background: #fafafa;
+}
+pre {
+  color: #CCC;
+  font-size: 85%;
+  padding: 10px;
+  background: #111;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+a.keyword {
+  text-decoration: none;
+  border-bottom: 1px solid #DEDEDE;
+  color: #222;
+}
+pre.lang-aa {
+  font-size: 100%;
+  line-height: 1.4;
+}
+.hatena-asin-detail li {
+  line-height: 1.4;
+}
+
+
+/* =============== side bar =============== */
+
+#box2 {
+  width: 220px;
+  float: right;
+  font-size: 78%;
+  word-wrap: break-word;
+}
+.hatena-module {
+  margin-bottom: 30px;
+}
+.hatena-module-title {
+  font-size: 108%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hatena-module-title a {
+  color: #222;
+  text-decoration: none;
+}
+.hatena-module-title a:hover {
+  text-decoration: underline;
+}
+.hatena-module .profile-icon {
+  margin-bottom: 5px;
+}
+.hatena-module .id {
+  display: block;
+  margin-bottom: 5px;
+}
+.profile-description {
+  margin-bottom: 5px;
+}
+.hatena-module-body li {
+  list-style: none;
+  margin-bottom: 0.65em;
+}
+.hatena-module-body {
+  line-height: 1.5;
+}
+.hatena-urllist{
+}
+.hatena-urllist a{
+}
+/* @Module::Search */
+form.search-form input {
+  background: #E9E9E9;
+  border: 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.search-form .search-module-input {
+  width: 170px;
+  padding: 7px;
+  margin: 0;
+  font-size: 78%;
+}
+.search-form .search-module-button {
+  height: 23px;
+  width: 23px;
+  border: none;
+  text-indent: -999px;
+  cursor: pointer;
+  background: url('/images/theme/search_g.png') 50% 50% no-repeat;
+}
+/* @About */
+.page-about dt {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+}
+.page-about dd {
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+.page-about .entry-content img.profile-icon {
+  height: 16px;
+  width: 16px;
+}
+
+
+/* =============== archive =============== */
+
+.page-archive #main {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-archive #main-inner {
+  font-size: 80%;
+  text-align: left;
+}
+.page-archive #main-inner p {
+  margin-bottom: 1em;
+}
+.page-archive #main-inner h1 {
+  font-size: 120%;
+  margin: 1em 0 0.5em 0;
+}
+.page-archive #main-inner h1 a {
+  color: #000;
+  text-decoration: none;
+}
+.page-archive #main-inner h1 a:hover {
+  text-decoration: underline;
+}
+.page-archive #main-inner section {
+  margin-bottom: 30px;
+}
+
+.page-archive #main-inner .entry-title:hover {
+  text-decoration: underline;
+}
+.page-archive #main-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-archive #main-inner li {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+.page-archive #main-inner li .categories {
+  font-size: 65%; 
+  margin-top: 10px;
+  display: block;
+}
+
+
+/* =============== about =============== */
+
+.page-about #wrapper{
+  background: none;
+}
+.page-about .entry-content{
+  width: auto;
+  left: 0px;
+}
+
+
+/* =============== category =============== */
+
+.breadcrumb {
+  width: 960px;
+  margin:30px auto 30px auto;
+  font-size: 80%;
+}
+.breadcrumb span:last-child{
+  color: #999;
+}
+
+
+/* =============== edit erea =============== */
+
+#top-editarea{
+  width: 960px;
+  margin:30px auto;
+}
+#bottom-editarea{
+  width: 960px;
+  margin:0 auto 30px auto;
+}
